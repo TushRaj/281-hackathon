@@ -85,29 +85,3 @@ exports.deletedrink = function(req, res) {
     });
 }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-// Populate database with sample data -- Only used once: the first time the application is started.
-// You'd typically not find this code in a real-life app, since the database would already exist.
-var populateDB = function() {
-
-    var drinks = [
-    {
-        name: "Latte",
-        size: "Medium",
-        country: "USA",
-        region: "Palo Alto",
-        
-    },
-    {
-        name: "Espresso",
-        size: "Large",
-        country: "USA",
-        region: "Palo Alto",
-         
-    }];
-
-    db.collection('drinks', function(err, collection) {
-        collection.insert(drinks, {safe:true}, function(err, result) {});
-    });
-
-};
