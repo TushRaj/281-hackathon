@@ -92,22 +92,18 @@ var populateDB = function() {
 
     var drinks = [
     {
-        name: "Jack",
-        year: "2009",
-        grapes: "Grenache / Syrah",
+        name: "Latte",
+        size: "Medium",
         country: "USA",
         region: "Palo Alto",
-        description: "The aromas of fruit and spice...",
-        picture: "saint_cosme.jpg"
+        
     },
     {
-        name: "LAN RIOJA CRIANZA",
-        year: "2006",
-        grapes: "Tempranillo",
+        name: "Espresso",
+        size: "Large",
         country: "USA",
         region: "Palo Alto",
-        description: "A resurgence of interest in boutique vineyards...",
-        picture: "lan_rioja.jpg"
+         
     }];
 
     db.collection('drinks', function(err, collection) {

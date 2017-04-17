@@ -1,6 +1,6 @@
 {
     "name": "Starbucks",
-    "description": "Order Drinks on Starbucks",
+    "description": "To Order Drinks on Starbucks",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
