@@ -1,4 +1,4 @@
 # 281-hackathon
 
 # Description
-A basic REST API driven node.js express mongo server sample.
+A basic REST API for ordering Starbucks drink driven node.js express mongo server sample.
