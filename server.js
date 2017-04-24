@@ -3,7 +3,10 @@ var express = require('express'),
 
 var app = express();
 
-app.configure(function () {
+app.configure(function () 
+
+
+{
         app.use(express.bodyParser());
         app.use(express.logger('dev'));
 });
