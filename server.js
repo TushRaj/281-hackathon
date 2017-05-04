@@ -3,7 +3,10 @@ var express = require('express'),
 
 var app = express();
 
-app.configure(function () {
+app.configure(function () 
+
+
+{
         app.use(express.bodyParser());
         app.use(express.logger('dev'));
 });
@@ -15,4 +18,4 @@ app.put('/drinks/:id', drink.updatedrink);
 app.delete('/drinks/:id', drink.deletedrink);
 
 app.listen(3000);
-console.log('Listening on port 3000...');
+console.log('Connected to the port 3000...');
