@@ -1,5 +1,5 @@
 var mongo = require('mongodb');
-
+mongo.BSONPure = require('bson').BSONPure;
 var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
@@ -84,4 +84,14 @@ exports.deletedrink = function(req, res) {
         });
     });
 }
+
+var populateDB = function() {
+
+    
+
+    db.collection('drinks', function(err, collection) {
+        collection.insert(drinks, {safe:true}, function(err, result) {});
+    });
+
+};
 

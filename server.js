@@ -1,12 +1,14 @@
-var express = require('express'),
-    drink = require('./routes/drinks');
-
+var express = require('express');
 var app = express();
+drink = require('./routes/drinks');
+var port = "27017";
+var mongoose  = require('mongoose');
 
-app.configure(function () 
+
+mongoose.connect('mongodb://localhost/SFO');
 
 
-{
+app.configure(function () {
         app.use(express.bodyParser());
         app.use(express.logger('dev'));
 });
@@ -17,5 +19,9 @@ app.post('/drinks', drink.adddrink);
 app.put('/drinks/:id', drink.updatedrink);
 app.delete('/drinks/:id', drink.deletedrink);
 
-app.listen(3000);
-console.log('Connected to the port 3000...');
+
+
+
+
+app.listen(port);
+console.log('Listening on Port ' + port);
